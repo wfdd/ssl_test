@@ -1,8 +1,7 @@
 import subprocess
 
 output = subprocess.run(
-  ["openssl", "s_client", "-showcerts", "-connect", "www.yahoo.com:443"],
-  capture_output=True)
+  ["openssl", "s_client", "-showcerts", "-connect", "www.yahoo.com:443"])
 
 print(output.returncode)
 print(output.stdout)
