@@ -1,3 +1,13 @@
+import subprocess
+
+output = subprocess.run(
+  ["openssl", "s_client", "-showcerts", "-connect", "www.yahoo.com:443"],
+  capture_output=True)
+
+print(output.returncode)
+print(output.stdout)
+print(output.stderr)
+
 # This is a template for a Python scraper on morph.io (https://morph.io)
 # including some code snippets below that you should find helpful
 
